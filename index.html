@@ -1,80 +1,149 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Invitación - Magali & Luis</title>
+<title>Invitación · Magali & Luis</title>
+
+<!-- Vista previa para WhatsApp/Redes -->
+<meta property="og:title" content="Invitación · Magali & Luis">
+<meta property="og:description" content="¡Nos casamos! Jupá · 30/11/2025 · Billinghurst 664 · CABA">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/leaves-top-left.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Tipografías -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
 <style>
-  :root{--bg:#f7f5f2;--paper:#ffffff;--ink:#2b2b2b;--muted:#6c6c6c;--accent:#8a9a7b;}
+  :root{
+    --bg:#f3f1ee;
+    --paper:#fbfaf8;
+    --ink:#2e2e2e;
+    --muted:#6b6b6b;
+    --accent:#c84e4e;
+    --green:#6b7f6a;
+  }
+
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-serif,'Georgia','Times New Roman',serif;line-height:1.55}
-  .wrap{max-width:820px;margin:24px auto;padding:16px}
-  .card{background:var(--paper);border-radius:24px;box-shadow:0 12px 30px rgba(0,0,0,.08);padding:34px;position:relative;overflow:hidden}
-  .leaf{position:absolute;inset:auto auto -60px -60px;width:240px;height:240px;background:
-      radial-gradient(120px 110px at 30% 30%, rgba(138,154,123,.25), transparent 60%),
-      radial-gradient(120px 110px at 70% 55%, rgba(138,154,123,.18), transparent 60%),
-      radial-gradient(120px 110px at 55% 75%, rgba(138,154,123,.14), transparent 60%);
-    filter:blur(2px);transform:rotate(8deg);opacity:.6}
-  .leaf.tl{left:-60px;top:-60px;bottom:auto;right:auto;transform:rotate(-12deg)}
-  .bhs{position:absolute;right:24px;top:18px;font-weight:600;letter-spacing:.05em}
-  .intro{text-align:center;color:#444;font-size:16px;margin-top:10px}
-  .date-big{font-size:clamp(44px,12vw,124px);letter-spacing:.06em;color:#d7d0c9;font-weight:700;text-align:center;margin-top:18px}
-  .script{font-family:'Brush Script MT','Segoe Script','Lucida Handwriting',cursive;font-size:clamp(28px,6vw,54px);color:#6a6a6a;text-align:center;margin-top:-16px}
-  .names{text-align:center;font-size:clamp(22px,3.2vw,34px);margin-top:10px;font-weight:600}
-  .details{text-align:center;margin-top:6px;font-size:16px}
-  .muted{color:var(--muted)}.small{font-size:13px}
-  .hr{height:1px;background:#eee;margin:18px 0}
-  .row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:18px 0 6px}
-  .btn{border:none;border-radius:14px;padding:14px 18px;cursor:pointer;background:var(--accent);color:#fff;font-weight:600;letter-spacing:.02em;box-shadow:0 6px 16px rgba(138,154,123,.28);transition:transform .06s ease,filter .2s ease}
-  .btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
-  .btn.secondary{background:#4f6f52}
-  .btn.ghost{background:#fff;color:#4f6f52;border:2px solid #4f6f52}
-  .foot{text-align:center;font-size:15px;margin-top:2px}
-  .gift-note{text-align:center;color:#555}
-  .gift-header{font-size:18px;text-align:center;line-height:1.6;margin:24px auto 16px auto;color:#4f4f4f;font-style:italic;max-width:680px}
-  .alias-large{text-align:center;font-size:28px;font-weight:700;color:#8a9a7b;margin:8px 0}
-  .alias-btn{display:flex;justify-content:center;margin-top:6px}
-  dialog{border:none;border-radius:18px;padding:0;width:min(680px,96vw);box-shadow:0 18px 60px rgba(0,0,0,.25)}
-  .modal-body{padding:20px 22px}
-  form label{font-weight:600;display:block;margin:12px 0 6px}
-  form input,form textarea{width:100%;padding:12px 12px;border-radius:12px;border:1px solid #ddd;font-size:15px}
-  .right{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
-  .notice{background:#f4f9f3;border:1px dashed #a6b79a;color:#4f6f52;padding:10px 12px;border-radius:12px;font-size:13px}
-  .rsvp-link{ text-align:center; margin: 6px 0 0 0; }
-  .rsvp-link a{ color:#4f6f52; font-weight:600; text-decoration:none; }
+  html,body{margin:0}
+  body{
+    font-family:"Cormorant Garamond", ui-serif, Georgia, "Times New Roman", serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.55;
+  }
+
+  a{color:inherit;text-decoration:none}
+
+  .wrap{
+    max-width:860px;
+    margin:28px auto;
+    padding:16px;
+  }
+
+  .card{
+    position:relative;
+    border-radius:26px;
+    padding:40px 28px 30px;
+    background-color:var(--paper);
+    background-image:url("assets/leaves-top-left.png");
+    background-repeat:no-repeat;
+    background-size: 115% auto;
+    background-position:-110px -80px;
+    box-shadow:0 14px 36px rgba(0,0,0,.08);
+    overflow:hidden;
+  }
+
+  @media (max-width:480px){
+    .card{
+      background-size:560px auto;
+      background-position:-130px -90px;
+    }
+  }
+
+  .bhe{position:absolute; right:22px; top:16px; font-weight:700; letter-spacing:.05em}
+  .intro{text-align:center;color:#414141;font-size:28px;font-weight:700;margin-top:6px;}
+  .date-big{text-align:center;font-weight:700;letter-spacing:.08em;color:#414141;font-size:clamp(48px,12vw,130px);line-height:1;margin:16px 0 0;user-select:none;}
+  .script{text-align:center;font-family:"Great Vibes",cursive;font-size:clamp(34px,6.2vw,60px);color:#6e6e6e;margin-top:-6px;}
+  .names{text-align:center;font-size:clamp(24px,3.2vw,36px);font-weight:700;margin-top:10px;}
+  .u-red{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:5px;}
+  .details{text-align:center;margin-top:10px;font-size:17px;}
+  .muted{color:var(--muted);}
+  .small{font-size:14px;}
+
+  .row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:18px 0 6px;}
+  .btn{
+    border:none;cursor:pointer;padding:12px 18px;border-radius:14px;
+    background:var(--green);color:#fff;font-weight:600;letter-spacing:.02em;
+    box-shadow:0 8px 18px rgba(107,127,106,.28);
+    transition:transform .06s ease,filter .2s ease;
+  }
+  .btn:hover{transform:translateY(-1px);filter:brightness(1.05);}
+  .link-ghost{
+    background:#fff;color:var(--green);border:2px solid var(--green);
+    text-decoration:none;display:inline-flex;align-items:center;gap:6px;
+    border-radius:14px;padding:10px 16px;font-weight:700;
+  }
+
+  .divider{display:flex;align-items:center;justify-content:center;gap:10px;margin:18px 0;}
+  .divider .line{height:1px;width:120px;background:#cfcfcf;}
+  .divider svg{width:28px;height:28px;fill:none;stroke:var(--green);stroke-width:1.8;}
+
+  .hr{height:1px;background:#eee;margin:18px 0;}
+  .foot{text-align:center;font-size:16px;}
+
+  .gift-note{text-align:center;color:#4f4f4f;}
+  .gift-header{font-size:18px;line-height:1.6;margin:20px auto 14px;max-width:680px;font-style:italic;}
+  .alias-large{font-size:28px;font-weight:700;color:var(--green);margin:8px 0;}
+  .alias-btn{display:flex;justify-content:center;margin-top:6px;}
+
+  a.uline, .uline a{
+    color:inherit;text-decoration:underline;
+    text-decoration-color:var(--accent);
+    text-decoration-thickness:2px;
+    text-underline-offset:5px;
+  }
+
+  @media (max-width:420px){
+    .divider .line{width:80px;}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="card">
-    <div class="leaf tl"></div>
-    <div class="leaf"></div>
-    <div class="bhs">ב״ה</div>
+    <div class="bhe">ב״ה</div>
 
-    <p class="intro">Con inmensa alegría y agradecimiento a Boré Olam<br/>queremos invitarlos a</p>
+    <p class="intro">Con inmensa alegría y agradecimiento a Boré Olam<br>queremos invitarlos a</p>
+
     <div class="date-big">30 11 25</div>
     <div class="script">Nuestra Jupá</div>
 
-    <div class="names">Magali Dalle &amp; Luis Muzikant</div>
+    <div class="names">
+      <span class="u-red">Magali Dalle</span> &amp; <span class="u-red">Luis Muzikant</span>
+    </div>
 
     <div class="details">
       <p><strong>DOMINGO 30 DE NOVIEMBRE DE 2025 · 18 HS</strong></p>
-      <p><strong>Billinghurst 664 · CABA</strong></p>
-      <p class="muted small">Ingreso únicamente con registro previo y DNI</p>
+      <p class="uline"><strong>Billinghurst 664 · CABA</strong></p>
+      <p class="muted small uline">Ingreso únicamente con registro previo y DNI</p>
     </div>
 
     <div class="row">
       <a class="btn" target="_blank" rel="noopener" href="https://maps.app.goo.gl/JyqdbBTuLBFMjdZk7">📍 Abrir en Google Maps</a>
-      <p class="rsvp-link btn ghost">👉 <a id="rsvpVisibleLink" href="https://forms.gle/gxzA8uSDyqXkXQgv5">Confirmar Asistencia</a></p>
+      <a class="link-ghost uline" href="https://forms.gle/gxzA8uSDyqXkXQgv5">👉 Confirmar asistencia</a>
     </div>
-    
 
-    <div class="hr"></div>
+    <div class="divider" aria-hidden="true">
+      <span class="line"></span>
+      <svg viewBox="0 0 24 24"><path d="M12 20s-6-3.5-6-8a3.5 3.5 0 0 1 6-2.5A3.5 3.5 0 0 1 18 12c0 4.5-6 8-6 8z"/></svg>
+      <span class="line"></span>
+    </div>
 
     <div class="foot">
       <p>A continuación seguiremos festejando en</p>
-      <p><strong>Salón Eijal Shimon · 7mo piso</strong></p>
+      <p class="uline"><strong>Salón Eijal Shimon · 7mo piso</strong></p>
       <p class="muted small">Menú Lácteo</p>
     </div>
 
@@ -82,26 +151,24 @@
 
     <div class="gift-note">
       <p class="gift-header">
-        Lo más importante para nosotros es vivir juntos este día tan especial.<br/>
-        Si querés acompañarnos también con un regalo, nos ayudaría mucho para armar nuestro hogar.<br/>
+        Lo más importante para nosotros es vivir juntos este día tan especial.<br>
+        Si querés acompañarnos también con un regalo, nos ayudaría mucho para armar nuestro hogar.<br>
         Te compartimos los datos:
       </p>
       <p class="alias-large">maga.luis.casamiento</p>
       <div class="alias-btn">
-        <button class="btn secondary" id="copyAlias">💳 Copiar alias</button>
+        <button class="btn" id="copyAlias">💳 Copiar alias</button>
       </div>
       <p class="muted small" style="margin-top:4px">Alias Brubank</p>
     </div>
   </div>
-  <p class="muted small" style="text-align:center;margin-top:10px">© 2025 Magali &amp; Luis · Invitación digital</p>
+
+  <p class="muted small" style="text-align:center;margin-top:10px">
+    © 2025 Magali &amp; Luis · Invitación digital
+  </p>
 </div>
 
 <script>
-  const config = {
-    useForms: true,
-    formsAction: "https://forms.gle/gxzA8uSDyqXkXQgv5"
-  };
-
   // Copiar alias
   document.getElementById("copyAlias").addEventListener("click", () => {
     navigator.clipboard.writeText("maga.luis.casamiento");
@@ -109,13 +176,6 @@
     btn.textContent = "✔ Alias copiado";
     setTimeout(() => btn.textContent = "💳 Copiar alias", 1800);
   });
-
-  // Botón RSVP: abrir en la MISMA pestaña (mejor para Android / WhatsApp)
-  document.getElementById("rsvpOpen").addEventListener("click", () => {
-    window.location.href = config.formsAction;
-  });
-
-  // Enlace visible ya tiene href directo (se deja sin target para misma pestaña)
 </script>
 </body>
 </html>
